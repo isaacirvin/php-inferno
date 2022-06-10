@@ -198,19 +198,37 @@ class Dog implements Animal
 
 // Uncomment me and see what happens
 
-// class Deer implements Animal
-// {
-// }
+ class Deer implements Animal
+ {
+     public function make_noise()
+     {
+         return 'imma deer';
+     }
+     public function can_run()
+     {
+         return true;
+     }
+ }
 
 
 // Uncomment me and see what happens
-// class AnyNoise implements Animal
-// {
-// 	public function __call($name, $args)
-// 	{
-//
-// 	}
-// }
+ class AnyNoise implements Animal
+ {
+ 	public function __call($name, $args)
+ 	{
+
+ 	}
+
+     public function make_noise()
+     {
+         // TODO: Implement make_noise() method.
+     }
+
+     public function can_run()
+     {
+         // TODO: Implement can_run() method.
+     }
+ }
 
 abstract class Insect implements Animal
 {
@@ -282,8 +300,7 @@ abstract class Monster
 }
 
 // Uncomment and see what happens
-
-// class InsectMonster extends Insect, Monster {}
+//class InsectMonster extends Insect, Monster {}
 
 /**
 * Traits are similar to abstract classes.
@@ -392,14 +409,14 @@ class Tree extends Plant
 
 class Nuclear_Power_Plant
 {
-	public function description()
+	public static function description()
 	{
 		return "500 Mega Watt 'Hellhound' Nuclear Facility";
 	}
 
-	public function amended_description()
+	public static function amended_description()
 	{
-		return $this->description() . " with a fully-featured cafeteria!";
+		return self::description() . " with a fully-featured cafeteria!";
 	}
 }
 

@@ -154,8 +154,8 @@ class Treachery
 	{
 		// not even a warning...
 		
-		assert_that(0090)->is_identical_to(__);
-		assert_that(0183)->is_identical_to(__);
+		assert_that("0090")->is_identical_to(__);
+		assert_that("0183")->is_identical_to(__);
 	}
 
 	/**

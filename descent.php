@@ -25,7 +25,7 @@ if (version_compare($min_version, phpversion()) > 0)
 require_once 'Pathway_Through_Darkness.php';
 
 $pathway = new Pathway_Through_Darkness(array(
-	'Limbo',
+	Limbo,
 	'Lust',
 	'Gluttony',
 	'Greed',
